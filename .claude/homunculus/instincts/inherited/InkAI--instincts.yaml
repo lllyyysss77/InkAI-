@@ -1,0 +1,346 @@
+# Instincts generated from https://github.com/lllyyysss77/InkAI-
+# Generated: 2026-08-01T11:49:00.671Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: InkAI--commit-conventional
+trigger: "when writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/InkAI-
+---
+
+# InkAI  Commit Conventional
+
+## Action
+
+Use conventional commit format with prefixes: docs, feat
+
+## Evidence
+
+- 4 commits analyzed
+- Detected conventional commit pattern
+- Examples: feat: 升级到新 pipeline + 修复 DeepSeek 缓存命中与 provider 配置, docs: 重构 README，补充架构演进与问题修复案例
+
+---
+id: InkAI--commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/InkAI-
+---
+
+# InkAI  Commit Length
+
+## Action
+
+Keep commit messages concise (~29 characters)
+
+## Evidence
+
+- Average commit message length: 29 chars
+- Based on 4 commits
+
+---
+id: InkAI--naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/InkAI-
+---
+
+# InkAI  Naming Files
+
+## Action
+
+Use snake_case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: snake_case
+
+---
+id: InkAI--import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/InkAI-
+---
+
+# InkAI  Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: InkAI--export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/InkAI-
+---
+
+# InkAI  Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: InkAI--test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/InkAI-
+---
+
+# InkAI  Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: InkAI--workflow-update-readme-and-readme-cn
+trigger: "when doing update readme and readme cn"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/InkAI-
+---
+
+# InkAI  Workflow Update Readme And Readme Cn
+
+## Action
+
+Follow the update-readme-and-readme-cn workflow:
+1. Edit README.md to add or update project information, architecture diagrams, issue fix cases, or feedback channels.
+2. Edit README_CN.md to mirror the changes in Chinese.
+3. Optionally update related documentation or requirements if needed.
+4. Commit both README.md and README_CN.md together.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: README.md, README_CN.md
+
+---
+id: inkai--snake_case-files
+trigger: "When creating or renaming a file in the codebase"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/InkAI-
+---
+
+# Inkai  Snake_case Files
+
+## Action
+
+Name the file using snake_case convention
+
+## Evidence
+
+- Pattern in namingConventions.files: snake_case
+
+---
+id: inkai--camelCase-functions
+trigger: "When defining a new function"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/InkAI-
+---
+
+# Inkai  CamelCase Functions
+
+## Action
+
+Name the function using camelCase convention
+
+## Evidence
+
+- Pattern in namingConventions.functions: camelCase
+
+---
+id: inkai--PascalCase-classes
+trigger: "When defining a new class"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/InkAI-
+---
+
+# Inkai  PascalCase Classes
+
+## Action
+
+Name the class using PascalCase convention
+
+## Evidence
+
+- Pattern in namingConventions.classes: PascalCase
+
+---
+id: inkai--SCREAMING_SNAKE_CASE-constants
+trigger: "When defining a constant"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/InkAI-
+---
+
+# Inkai  SCREAMING_SNAKE_CASE Constants
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE convention
+
+## Evidence
+
+- Pattern in namingConventions.constants: SCREAMING_SNAKE_CASE
+
+---
+id: inkai--relative-imports
+trigger: "When importing modules within the project"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/InkAI-
+---
+
+# Inkai  Relative Imports
+
+## Action
+
+Use relative import statements
+
+## Evidence
+
+- Pattern in importStyle: relative
+
+---
+id: inkai--named-exports
+trigger: "When exporting modules or functions"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/InkAI-
+---
+
+# Inkai  Named Exports
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in exportStyle: named
+
+---
+id: inkai--try-catch-error-handling
+trigger: "When handling potential errors in code"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/InkAI-
+---
+
+# Inkai  Try Catch Error Handling
+
+## Action
+
+Use try-catch blocks for error handling
+
+## Evidence
+
+- Pattern in errorHandling.style: try-catch
+
+---
+id: inkai--conventional-commits
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: lllyyysss77/InkAI-
+---
+
+# Inkai  Conventional Commits
+
+## Action
+
+Use conventional commit prefixes (e.g., 'feat:', 'docs:') followed by a concise description
+
+## Evidence
+
+- Seen in commit: 'feat: 升级到新 pipeline + 修复 DeepSeek 缓存命中与 provider 配置'
+- Seen in commit: 'docs: 重构 README，补充架构演进与问题修复案例'
+- Pattern in commits.prefixes: ['docs', 'feat']
+
+---
+id: inkai--concise-commit-messages
+trigger: "When composing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: lllyyysss77/InkAI-
+---
+
+# Inkai  Concise Commit Messages
+
+## Action
+
+Keep the commit message concise (around 29 characters on average)
+
+## Evidence
+
+- Pattern in commits.averageLength: 29
+
+---
+id: inkai--update-readme-workflow
+trigger: "When documentation needs to be updated to reflect new features, architecture changes, or to add feedback channels"
+confidence: 0.98
+domain: workflow
+source: repo-analysis
+source_repo: lllyyysss77/InkAI-
+---
+
+# Inkai  Update Readme Workflow
+
+## Action
+
+Edit README.md and README_CN.md to mirror updates, then commit both files together
+
+## Evidence
+
+- Workflow: update-readme-and-readme-cn
+- Seen in commit: 'docs: README 添加反馈与建议渠道'
+- Files involved: README.md, README_CN.md
+
